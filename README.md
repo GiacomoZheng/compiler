@@ -1,2 +1,2 @@
 # compiler
-the compiler of the gm language with Scheme
+the compiler of the gm
