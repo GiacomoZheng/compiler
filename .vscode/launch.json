@@ -1,0 +1,11 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - Stack",
+			"request": "launch",
+			"mainClass": "structure.Stack",
+			"projectName": "gm-compiler_87c5beb1"
+		}
+	]
+}
