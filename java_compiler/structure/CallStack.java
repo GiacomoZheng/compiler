@@ -7,6 +7,8 @@ package structure;
  *  ├── CallStack
  *	└── BraStack
  */
-public class BraStack extends Stack {
-	
+public class CallStack extends Stack {
+    static class Frame {
+        // or named 
+    }
 }
