@@ -1,4 +1,4 @@
-package structure;
+package structure.tree;
 
 /**
  * ScopeTree, use to record the scope of temporaries

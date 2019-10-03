@@ -1,4 +1,4 @@
-package structure;
+package structure.tree;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
