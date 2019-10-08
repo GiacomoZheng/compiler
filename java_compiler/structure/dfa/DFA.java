@@ -1,9 +1,9 @@
 package structure.dfa;
 
+import java.util.List;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Set;
-
-import structure.tree.LocTree;
 
 /*
     Source: https://en.wikipedia.org/wiki/Deterministic_finite_automaton
@@ -21,58 +21,66 @@ import structure.tree.LocTree;
  *  ├── LocDFA
  *  │   ├── ConsDFA
  *  │   └── TempDFA
- *  └── 
+ *  └── SenDFA (sentence DFA)
  */
-public class DFA {
+public abstract class DFA {
+    // a little different from the original one
 
-    // instance property
+    final public State initial;
     public HashMap<String, State> states;
-    public Set<String> alphabet; // I want to use a criterion to replace it
-    // transition
-    public State initial;
-    public Set<State> accepts;
+    public State currentState;
 
-    public State current;
+    // Set<Character> alphabet; //useless in my version
+    // Set<State> accepts; // useless here
+
+    public Set<Character> whitespace; // he characters would be ignored
+
 
     DFA () {
         states = new HashMap<>();
         initial = new State("__initial__"); // py style
         addState(initial);
-        current = initial;
+        currentState = initial;
+        whitespace = new HashSet<>();
     }
 
-    // public abstract LocTree analyze(String text);
+    abstract public List<Token> analyze(String text);
+
+    public static String check_end(String text) {
+        if (!text.endsWith("\n")) {
+            text += "\n";
+            System.out.println("fixed: should be end with \"\\n\"");        
+        }
+        return text;
+    }
 
     public void addState(State state) {
         states.put(state.name, state);
-        System.out.println("1");
     }
+
     public void addState(State... stateArray) {
         for (State state: stateArray) addState(state);
-        System.out.println("...");
     }
 
     public void check_correct() {
-        if (states.containsKey("__initial__") & states.values().containsAll(accepts)) {
+        if (states.containsKey("__initial__")) {
             return;
         }
         System.out.println("error: incorrect definition.");
         System.exit(0);
     }
 
-    public void check_end() {
-        if (accepts.contains(current)) {
-            System.out.println("end");
-            System.exit(0);
-        }
-    }
-
     public static void main(String[] args) {
-        DFA s = new DFA();
-        State a1 = new State("1");
-        State a2 = new State("2");
-        State a3 = new State("3");
-        State a4 = new State("4");
-        s.addState(stateArray);
+        // DFA s = new LocDFA();
+        // State a1 = new State("1");
+        // State a2 = new State("2");
+        // State a3 = new State("3");
+        // State a4 = new State("4");
+        // s.addState(a1, a2, a3, a4);
+        // String text = "a";
+        // text = check_end(text);
+        // System.out.println(text);
+        Character c = '\n';
+        System.out.println((c));
     }
 }

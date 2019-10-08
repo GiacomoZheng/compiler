@@ -7,12 +7,10 @@ package structure.stack;
  *  ├── CallStack
  *	└── BraStack
  */
-public abstract class Stack {
-
+public class Stack {
     public static class Frame {
         public Object data;
         public Frame next;
-
         Frame (Object data) {
             this.data = data;
         }

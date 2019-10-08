@@ -6,5 +6,7 @@
 		"**/.settings": true,
 		"**/*.class": true
 	},
-	"java.dependency.syncWithFolderExplorer": false
+	"java.dependency.syncWithFolderExplorer": false,
+
+	"editor.suggestSelection": "first"
 }
