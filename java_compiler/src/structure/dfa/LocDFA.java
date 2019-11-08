@@ -1,7 +1,7 @@
 package structure.dfa;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+// import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -10,7 +10,7 @@ import java.util.Set;
  * ├── LocDFA 
  * │ ├── ConsDFA 
  * │ └── TempDFA 
- * └── SenDFA (sentence DFA)
+ * └── SenDFA (identifierSentence DFA)
  */
 public class LocDFA extends DFA {
     // mainly consider about the ( and )

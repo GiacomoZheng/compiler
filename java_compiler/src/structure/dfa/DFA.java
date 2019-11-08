@@ -21,7 +21,7 @@ import java.util.Set;
  *  ├── LocDFA
  *  │   ├── ConsDFA
  *  │   └── TempDFA
- *  └── SenDFA (sentence DFA)
+ *  └── SenDFA (identifierSentence DFA)
  */
 public abstract class DFA {
     // a little different from the original one
@@ -33,7 +33,7 @@ public abstract class DFA {
     // Set<Character> alphabet; //useless in my version
     // Set<State> accepts; // useless here
 
-    public Set<Character> whitespace; // he characters would be ignored
+    public Set<Character> whitespaces; // he characters would be ignored
 
 
     DFA () {
@@ -41,7 +41,7 @@ public abstract class DFA {
         initial = new State("__initial__"); // py style
         addState(initial);
         currentState = initial;
-        whitespace = new HashSet<>();
+        whitespaces = new HashSet<>();
     }
 
     abstract public List<Token> analyze(String text);
@@ -71,15 +71,6 @@ public abstract class DFA {
     }
 
     public static void main(String[] args) {
-        // DFA s = new LocDFA();
-        // State a1 = new State("1");
-        // State a2 = new State("2");
-        // State a3 = new State("3");
-        // State a4 = new State("4");
-        // s.addState(a1, a2, a3, a4);
-        // String text = "a";
-        // text = check_end(text);
-        // System.out.println(text);
         Character c = '\n';
         System.out.println((c));
     }

@@ -14,7 +14,7 @@ public class Test {
         return new String(encoded, encoding);
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void lexer(String[] args) throws IOException {
         SenDFA dfa = new SenDFA();
         String text;
 
@@ -52,5 +52,11 @@ public class Test {
         } else {
             System.out.println("error: invalid arguments");
         }
+    }
+
+    public static void main(String[] args) throws IOException {
+        lexer(args);
+        // SenDFA dfa = new SenDFA();
+        // System.out.println(dfa.states.get("__lineString__").terminators);
     }
 }

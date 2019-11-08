@@ -19,6 +19,14 @@ public class Tools {
         return res;
     }
 
+    public static String check_end(String text) {
+        if (!text.endsWith("\n")) {
+            text += "\n";
+            System.out.println("fixed: should be end with \"\\n\"");        
+        }
+        return text;
+    }
+
     public static void main(String[] args) {
         System.out.println(fixEscape("asas\tfdff"));
     }

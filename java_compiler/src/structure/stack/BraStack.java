@@ -16,7 +16,7 @@ public class BraStack { // extends Stack {
 	public static class Frame extends Stack.Frame {
         public Bra bracket;
         Frame (String opening, String closing) {
-            super(data); // ??
+            super(null); // ??
             bracket.opening = opening;
             bracket.closing = closing;
         }
@@ -28,8 +28,4 @@ public class BraStack { // extends Stack {
     public boolean isempty() {
         return size == 0;
     }
-
-
-
-
 }

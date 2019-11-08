@@ -13,7 +13,7 @@ public class Token {
 
     @Override
     public String toString() {
-        return "< " + state.name + " , " + Tools.fixEscape(name) + " >";
+        return "< " + state.name + " >|< " + Tools.fixEscape(name) + " >";
     }
 
     public static void main(String[] args) {
