@@ -1,3 +1,6 @@
+_java_compiler
 *.class
 .vscode/**
 !.vscode/settings.json
+
+**/target/**

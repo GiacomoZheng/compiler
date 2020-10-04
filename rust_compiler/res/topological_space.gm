@@ -1,0 +1,8 @@
+:
+(
+	⊆ set,
+	(
+		∀X: ∈ topological_space,
+		X.τ: ∈ topology(X),
+	)
+),

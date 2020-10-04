@@ -1,0 +1,5 @@
+name = "topological_space"
+class_level = 1
+
+[fields]
+"τ" = "∈ topology(self)"
